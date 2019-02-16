@@ -1,0 +1,53 @@
+{
+	"name": "zhv-de",
+	"description": "Lets you fetch the most up-to-date release of the german central public transport stop registry (Zentrales Haltestellenverzeichnis, ZHV).",
+	"version": "0.0.0",
+	"keywords": [
+		"public",
+		"transport",
+		"german",
+		"germany",
+		"registry",
+		"stop",
+		"station",
+		"zhv",
+		"haltestelle",
+		"verzeichnis",
+		"bahn",
+		"db",
+		"railway",
+		"bus",
+		"train"
+	],
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"homepage": "https://github.com/juliuste/zhv-de",
+	"repository": "juliuste/zhv-de",
+	"bugs": "https://github.com/juliuste/zhv-de/issues",
+	"main": "lib/index.js",
+	"files": [
+		"lib/*"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"depcheck": "^0.7.1",
+		"eslint": "^5.14.1",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-node": "^8.0.1",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"tape": "^4.10.1",
+		"tape-promise": "^4.0.0"
+	},
+	"scripts": {
+		"check-deps": "depcheck",
+		"lint": "eslint lib test.js",
+		"fix": "eslint --fix lib test.js",
+		"test": "npm run lint && npm run check-deps && node test",
+		"prepublishOnly": "npm test"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"license": "ISC"
+}
