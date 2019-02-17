@@ -1,6 +1,9 @@
 sudo: false
 language: node_js
 node_js:
-  - 'stable'
-  - '10'
-  - '8'
+- stable
+- '10'
+- '8'
+env:
+  matrix:
+    secure: KfQrVHMC4xiOOsiQ/HXt4j/S8H5efVqnO254gETlQVdgNOCH1tY38v6sJv8Q2qTWcI8qAF7H3rp25Uuci5tVnH01rLEhr4EA919cbjz4V9yvZGGat1if4sQdtQiz46Z9HsMw+H/6k9Gl/ViueJfgwX6hMsg/GeZJlGHWEFahM2jWX8SBrG/P3/aqsByIVjKPFXhyRNUa3hIPw7O5ziPHx7ZhDbQSoUgVaaW+WMhiF6Qxrt4ENMYCoL0236Q0b2GRcWF8e+Z3Ub4cMpjyWkGuqGwMZ9ojs72V+SbIsS95smgp24sW9hwGosvpBBlxkfHr6P/TAiNgjc5b42MEBsQPEUbMyfeqwzlSU8N3PZGQp5f+JWVU+1eLZXWq8FhY+m0ZVmoPZ7NFGY2XIZixZF1nlmRYATVtwLOKfOvhn8UoGJF1ymU9yFDenKL15qgiMwelVdpptsNBeQ6VRGbdfkB21gJOKQITkpYp0rPdbE+KmJ/XFvRpRu1a8b7H4+8VGiKLs8rbs2frgPGO8RKqLmN2MAKUaIJqrGec2Y3Fmx4RWL93dIWW7ijMuLjW9FWYbHVA+LcVbiNQJ0+Afp9wlpqM3+sFlU/Dv2GBSxTd2WHOrSRoe75Wh+JLa8+7ZKfJx7dVX22gb8hqucLEkTf1ORWxbCTf4Yu1c4/2N2yvuNRHxYQ=
