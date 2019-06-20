@@ -35,7 +35,7 @@
 		"got": "^9.6.0",
 		"lodash.frompairs": "^4.0.1",
 		"parse-decimal-number": "^1.0.0",
-		"query-string": "^6.2.0",
+		"query-string": "^6.8.0",
 		"strip-bom-stream": "^3.0.0",
 		"through2-map": "^3.0.0",
 		"unzip": "^0.1.11"
