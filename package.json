@@ -32,8 +32,8 @@
 	],
 	"scripts": {
 		"check-deps": "depcheck",
-		"fix": "eslint --fix lib test.js",
-		"lint": "eslint lib test.js",
+		"fix": "eslint --fix lib test.js example.js",
+		"lint": "eslint lib test.js example.js",
 		"prepublishOnly": "npm test",
 		"test": "npm run lint && npm run check-deps && node test | tap-min"
 	},
@@ -57,6 +57,7 @@
 		"eslint-plugin-promise": "^4.2.1",
 		"eslint-plugin-standard": "^4.0.1",
 		"get-stream": "^6.0.0",
+		"ndjson": "^2.0.0",
 		"tap-min": "^2.0.0",
 		"tape": "^5.0.1",
 		"tape-promise": "^4.0.0"
