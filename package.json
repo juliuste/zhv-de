@@ -1,7 +1,7 @@
 {
 	"name": "zhv-de",
-	"description": "Lets you fetch the most up-to-date release of the german central public transport stop registry (Zentrales Haltestellenverzeichnis, ZHV).",
 	"version": "0.0.0",
+	"description": "Lets you fetch the most up-to-date release of the german central public transport stop registry (Zentrales Haltestellenverzeichnis, ZHV).",
 	"keywords": [
 		"public",
 		"transport",
@@ -19,14 +19,22 @@
 		"bus",
 		"train"
 	],
-	"author": "Julius Tens <mail@juliustens.eu>",
 	"homepage": "https://github.com/juliuste/zhv-de",
-	"repository": "juliuste/zhv-de",
 	"bugs": "https://github.com/juliuste/zhv-de/issues",
+	"repository": "juliuste/zhv-de",
+	"license": "ISC",
+	"author": "Julius Tens <mail@juliustens.eu>",
 	"main": "lib/index.js",
 	"files": [
 		"lib/*"
 	],
+	"scripts": {
+		"check-deps": "depcheck",
+		"fix": "eslint --fix lib test.js",
+		"lint": "eslint lib test.js",
+		"prepublishOnly": "npm test",
+		"test": "npm run lint && npm run check-deps && node test | tap-min"
+	},
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
 		"cldr": "^5.0.0",
@@ -53,15 +61,7 @@
 		"tape": "^4.10.1",
 		"tape-promise": "^4.0.0"
 	},
-	"scripts": {
-		"check-deps": "depcheck",
-		"lint": "eslint lib test.js",
-		"fix": "eslint --fix lib test.js",
-		"test": "npm run lint && npm run check-deps && node test | tap-min",
-		"prepublishOnly": "npm test"
-	},
 	"engines": {
-		"node": ">=8"
-	},
-	"license": "ISC"
+		"node": ">=10"
+	}
 }
