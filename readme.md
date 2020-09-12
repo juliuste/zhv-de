@@ -1,6 +1,6 @@
 # zhv-de
 
-Fetch the most up-to-date release of the german central public transport stop registry ([Zentrales Haltestellenverzeichnis, ZHV](https://zhv.wvigmbh.de/)). Sadly, there is no static endpoint from which you could obtain this data (yet), you can use this small tool until they provide one.
+Fetch the most up-to-date release of the german central public transport stop registry (Zentrales Haltestellenverzeichnis, ZHV - available on [opendata-oepnv.de](https://www.opendata-oepnv.de/ht/de/organisation/delfi/startseite?tx_vrrkit_view%5Bdataset_name%5D=deutschlandweite-haltestellendaten&tx_vrrkit_view%5Baction%5D=details&tx_vrrkit_view%5Bcontroller%5D=View) as well as [zhv.wvigmbh.de](https://zhv.wvigmbh.de/)). Sadly, there is no static endpoint from which you could obtain this data (yet), you can use this small tool until they provide one.
 
 [![npm version](https://img.shields.io/npm/v/zhv-de.svg)](https://www.npmjs.com/package/zhv-de)
 [![Build Status](https://travis-ci.org/juliuste/zhv-de.svg?branch=master)](https://travis-ci.org/juliuste/zhv-de)
@@ -14,16 +14,16 @@ npm install zhv-de
 
 ## Usage
 
-The module exposes a single method which takes `username` and `password` (you can obtain those credentials for free [at the ZHV website](https://zhv.wvigmbh.de/Account/Register.aspx)) as arguments and returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise) that will resolve in an object-mode stream of stops.
+The module exposes a single method which takes `user` and `password` (you can obtain those credentials for free [at the opendata-oepnv.de website](https://www.opendata-oepnv.de/ht/de/standards/registrierung)) as arguments and returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise) that will resolve in an object-mode stream of stops.
 
 ```js
 const zhv = require('zhv-de')
-const username = '<your-zhv-username>'
-const password = '<your-zhv-password>'
+const user = '<your-opendata-oepnv.de-user-email>'
+const password = '<your-opendata-oepnv.de-password>'
 
 const ndjson = require('ndjson') // we use this to transform objects to JSON to pipe to stdout
 
-zhv(username, password)
+zhv(user, password)
 .then(dataStream => dataStream.pipe(ndjson.stringify()).pipe(process.stdout))
 .catch(console.error)
 ```
