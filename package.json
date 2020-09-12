@@ -1,6 +1,6 @@
 {
 	"name": "zhv-de",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Lets you fetch the most up-to-date release of the german central public transport stop registry (Zentrales Haltestellenverzeichnis, ZHV).",
 	"keywords": [
 		"public",
@@ -17,7 +17,9 @@
 		"db",
 		"railway",
 		"bus",
-		"train"
+		"train",
+		"opendata",
+		"oepnv"
 	],
 	"homepage": "https://github.com/juliuste/zhv-de",
 	"bugs": "https://github.com/juliuste/zhv-de/issues",
