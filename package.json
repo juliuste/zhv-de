@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
-		"cldr": "^5.0.0",
+		"cldr": "^7.1.1",
 		"csv-parse": "^4.3.3",
 		"got": "^11.6.2",
 		"lodash": "^4.17.20",
